@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1>Wellcome to Resto App!</h1>
+    <p class="lead">Let's find a good restaurant</p>
+    <a class="btn btn-primary" href="/static/ui/index.html">Visit Test Client</a>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <h3>API</h3>
+            <p>Browse resto API</p>
+            <p>This API was built with Django Rest Framework. The browsable documentation is built with swagger.</p>
+            <p>
+                <a class="btn btn-default" href="{% url "django.swagger.base.view" %}">Doc</a>
+                <a class="btn btn-default" href="{% url "rest_framework:login" %}?next=/">Login</a>
+                <a class="btn btn-default" href="{% url "rest_framework:logout" %}">Logout</a>
+            </p>
+        </div>
+        <div class="col-sm-4">
+            <h3>Admin</h3>
+            <p>Django Admin interface to manage Restaurants, Users, Permissions, etc </p>
+            <p>From this interface you can create new users for the system.<p>
+            <p>
+                <a class="btn btn-default" href="/admin">Enter Admin</a>
+            </p>
+        </div>
+        <div class="col-sm-4">
+            <h3>Client</h3>
+            <p>Web site built with Angular using yeoman as a scaffolding with Coffee script</p>
+            <p>This is just a test client, it was build for testing purposes, it has no test or good design patters.</p>
+            <p>
+                <a class="btn btn-default" href="/static/ui/index.html">Visit Test Client</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
